@@ -3,7 +3,7 @@ session_start();
 date_default_timezone_set("Asia/Taipei");
 
 class DB{
-    protected $dsn="mysql:host=localhost;charset=utf8;dbname=db20";
+    protected $dsn="mysql:host=localhost;charset=utf8;dbname=bq0101";
     protected $pdo;
     protected $table;
 
@@ -111,3 +111,6 @@ function dd($array){
 function to($url){
     header("location:$url");
 }
+
+$Total=new DB('total');
+$Bottom=new DB('bottom');
