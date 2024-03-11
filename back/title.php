@@ -10,8 +10,7 @@
 					<td></td>
 				</tr>
 				<?php
-				$rows = $Title->all();
-				
+				$rows = $DB->all();				
 				foreach ($rows as $row) {
 				?>
 					<tr>

@@ -112,6 +112,10 @@ function to($url){
     header("location:$url");
 }
 
+$Total=new DB('total');
+$Bottom=new DB('bottom');
+$Title=new DB('title');
+
 //可行的方法一
 if(isset($_GET['do'])){ //若 $_GET['do]有存在
     if(isset(${ucfirst($_GET['do'])})){ //若 $_GET['do]轉完大寫後，也存在
@@ -122,8 +126,6 @@ if(isset($_GET['do'])){ //若 $_GET['do]有存在
     $DB=$Title;
 }
 
-$Total=new DB('total');
-$Bottom=new DB('bottom');
-$Title=new DB('title');
 
-// dd($Title->all());
+
+// dd($DB->all());
