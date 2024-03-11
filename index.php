@@ -1,3 +1,4 @@
+<?php include_once "db.php";?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <!-- saved from url=(0040)http://127.0.0.1/test/exercise/collage/? -->
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -36,13 +37,13 @@
 			</div>
 			<!-- 中間共同區塊_start -->
 			<?php
-				$do=$_GET['do']??'main';
-				$file='./front/{$do}.php';
-				if(file_exists($file)){
-					include $file;
-				}else{
-					include "./front/main.php";
-				}
+			$do = $_GET['do'] ?? 'main';
+			$file = './front/{$do}.php';
+			if (file_exists($file)) {
+				include $file;
+			} else {
+				include "./front/main.php";
+			}
 			?>
 			<!-- 中間共同區塊_end -->
 			<div id="alt" style="position: absolute; width: 350px; min-height: 100px; word-break:break-all; text-align:justify;  background-color: rgb(255, 255, 204); top: 50px; left: 400px; z-index: 99; display: none; padding: 5px; border: 3px double rgb(255, 153, 0); background-position: initial initial; background-repeat: initial initial;"></div>
