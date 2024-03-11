@@ -19,7 +19,6 @@
 			<div id="cvr" style="position:absolute; width:99%; height:100%; margin:auto; z-index:9898;"></div>
 		</div>
 	</div>
-	<iframe style="display:none;" name="back" id="back"></iframe>
 	<div id="main">
 		<a title="" href="?">
 			<div class="ti" style="background:url(&#39;use/&#39;); background-size:cover;"></div><!--標題-->
@@ -85,21 +84,8 @@
 
 			?>
 			<!-- 共同區塊_end -->
-			<div id="alt" style="position: absolute; width: 350px; min-height: 100px; word-break:break-all; text-align:justify;  background-color: rgb(255, 255, 204); top: 50px; left: 400px; z-index: 99; display: none; padding: 5px; border: 3px double rgb(255, 153, 0); background-position: initial initial; background-repeat: initial initial;"></div>
 			<script>
-				$(".sswww").hover(
-					function() {
-						$("#alt").html("" + $(this).children(".all").html() + "").css({
-							"top": $(this).offset().top - 50
-						})
-						$("#alt").show()
-					}
-				)
-				$(".sswww").mouseout(
-					function() {
-						$("#alt").hide()
-					}
-				)
+
 			</script>
 		</div>
 		<div style="clear:both;"></div>
