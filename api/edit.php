@@ -28,3 +28,5 @@ foreach ($_POST['id'] as $key => $id) {
         $DB->save($row);
     }
 }
+
+to("../back.up?do=title");
