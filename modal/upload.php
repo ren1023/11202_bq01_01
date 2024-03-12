@@ -1,4 +1,5 @@
 <?php
+// print_r($_GET);
 switch ($_GET['table']) {
     case 'title':
         echo "<h3>更新網站標題圖片</h3>";
@@ -14,25 +15,38 @@ switch ($_GET['table']) {
 
 <hr>
 
-<form action="./api/upload.php" method="post" enctype="multipart/form-data">
-    <table style="width:70%;margin:auto">
+<form action="./api/update.php" method="post" enctype="multipart/form-data">
+    <table style="width:70%; margin:auto;">
         <tr>
             <?php
             switch ($_GET['table']) {
                 case 'title':
-                    echo "<h3>更新網站標題圖片</h3>";
+                    echo "<td>標題區圖片</td>";
                     break;
                 case 'mvim':
-                    echo "<h3>更新動畫圖片</h3>";
+                    echo "<td>動畫圖片</td>";
                     break;
                 case 'image':
-                    echo "<h3>更新校圖映像圖片</h3>";
+                    echo "<td>校園映像圖片</td>";
                     break;
             }
             ?>
+            
             <td>
                 <input type="file" name="img" id="">
             </td>
+        </tr>
+        <tr>
+            <?php
+            switch($_GET['table']){
+                case 'title':
+                    echo "<td>標題區替代文字</td>";
+                    echo "<td>";
+                    echo "<input type='text' name='text'>";
+                    echo "</td>";
+                    break;
+            }
+?>
         </tr>
     </table>
     <div class="cent">

@@ -29,4 +29,4 @@ foreach ($_POST['id'] as $key => $id) {
     }
 }
 
-to("../back.up?do=title");
+to("../back.php?do=title");

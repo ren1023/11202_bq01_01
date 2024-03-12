@@ -10,26 +10,27 @@
 					<td></td>
 				</tr>
 				<?php
-				$rows = $DB->all();				
+				$rows = $DB->all();
 				foreach ($rows as $row) {
+					// echo $row['id'];
 				?>
 					<tr>
 						<td width="45%">
-							<img src="./img/<?=$row['img'];?>" style="width: 300px;height:30px">
+							<img src="./img/<?= $row['img']; ?>" style="width: 300px;height:30px">
 						</td>
 						<td width="23%">
-							<input type="text" name="text[]" value="<?=$row['text'];?>">
-							<input type="hidden" name="id[]" value="<?=$row['id'];?>">
+							<input type="text" name="text[]" value="<?= $row['text']; ?>">
+							<input type="hidden" name="id[]" value="<?= $row['id']; ?>">
 
 						</td>
 						<td width="7%">
-							<input type="radio" name="sh" value="<?=$row['id'];?>" <?=($row['sh']==1)?'checked':"";?>>
+							<input type="radio" name="sh" value="<?= $row['id']; ?>" <?= ($row['sh'] == 1) ? 'checked' : ""; ?>>
 						</td>
 						<td width="7%">
-							<input type="checkbox" name="del[]" value="<?=$row['id'];?>">
+							<input type="checkbox" name="del[]" value="<?= $row['id']; ?>">
 						</td>
 						<td>
-							<input type="button" value="更新圖片" onclick="op('#cover','#cvr','./modal/upload.php?table=<?= $do;?>&id= <?=$row['id'];?>')">
+							<input type="button" onclick="op('#cover','#cvr','./modal/upload.php?table=<?= $do; ?>&id=<?= $row['id']; ?>')" value="更新圖片">
 						</td>
 					</tr>
 				<?php
@@ -40,10 +41,10 @@
 				<tbody>
 					<tr>
 						<td width="200px">
-							<input type="button" onclick="op('#cover','#cvr','./modal/<?= $do;?>.php?table=<?=$do;?>')" value="新增網站標題圖片">
+							<input type="button" onclick="op('#cover','#cvr','./modal/<?= $do; ?>.php?table=<?= $do; ?>')" value="新增網站標題圖片">
 						</td>
 						<td class="cent">
-							<input type="hidden" name="table" value="<?=$do;?>">
+							<input type="hidden" name="table" value="<?= $do; ?>">
 							<input type="submit" value="修改確定">
 							<input type="reset" value="重置">
 						</td>
@@ -52,4 +53,4 @@
 			</table>
 		</form>
 	</div>
-<!-- 共同區塊_end -->
+	<!-- 共同區塊_end -->
