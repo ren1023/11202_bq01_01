@@ -3,7 +3,7 @@ session_start();
 date_default_timezone_set("Asia/Taipei");
 
 class DB{
-    protected $dsn="mysql:host=localhost;charset=utf8;dbname=bq0101";
+    protected $dsn="mysql:host=localhost;charset=utf8;dbname=bq01";
     protected $pdo;
     protected $table;
 
@@ -114,7 +114,7 @@ function to($url){
 
 $Total=new DB('total');
 $Bottom=new DB('bottom');
-$Title=new DB('title');
+$Title=new DB('titles');
 
 //可行的方法一
 if(isset($_GET['do'])){ //若 $_GET['do]有存在
